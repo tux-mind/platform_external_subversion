@@ -81,32 +81,7 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_subr/win32_crashrpt.c\
 	subversion/libsvn_subr/win32_crypto.c\
 	subversion/libsvn_subr/win32_xlate.c\
-	subversion/libsvn_subr/xml.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libexpat\
-	libsqlite3
-LOCAL_MODULE := libsvn_subr-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_delta/libsvn_delta-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_subr/xml.c\
 	subversion/libsvn_delta/cancel.c\
 	subversion/libsvn_delta/compat.c\
 	subversion/libsvn_delta/compose_delta.c\
@@ -118,56 +93,8 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_delta/svndiff.c\
 	subversion/libsvn_delta/text_delta.c\
 	subversion/libsvn_delta/version.c\
-	subversion/libsvn_delta/xdelta.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_delta-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_fs_util/libsvn_fs_util-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	subversion/subversion/include\
-	subversion/subversion\
-	apr/include\
-	apr-util/include\
-	expat/lib\
-	libiconv/include\
-	neon/src\
-	sqlite3
-LOCAL_SRC_FILES:= \
-	subversion/libsvn_fs_util/fs-util.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_fs_util-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_diff/libsvn_diff-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_delta/xdelta.c\
+	subversion/libsvn_fs_util/fs-util.c\
 	subversion/libsvn_diff/deprecated.c\
 	subversion/libsvn_diff/diff.c\
 	subversion/libsvn_diff/diff3.c\
@@ -177,31 +104,7 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_diff/lcs.c\
 	subversion/libsvn_diff/parse-diff.c\
 	subversion/libsvn_diff/token.c\
-	subversion/libsvn_diff/util.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_diff-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_fs_fs/libsvn_fs_fs-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_diff/util.c\
 	subversion/libsvn_fs_fs/caching.c\
 	subversion/libsvn_fs_fs/dag.c\
 	subversion/libsvn_fs_fs/fs.c\
@@ -211,33 +114,7 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_fs_fs/lock.c\
 	subversion/libsvn_fs_fs/rep-cache.c\
 	subversion/libsvn_fs_fs/temp_serializer.c\
-	subversion/libsvn_fs_fs/tree.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_delta-1\
-	libsvn_subr-1\
-	libsvn_fs_util-1
-LOCAL_MODULE := libsvn_fs_fs-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_ra_svn/libsvn_ra_svn-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_fs_fs/tree.c\
 	subversion/libsvn_ra_svn/client.c\
 	subversion/libsvn_ra_svn/cram.c\
 	subversion/libsvn_ra_svn/cyrus_auth.c\
@@ -245,32 +122,7 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_ra_svn/internal_auth.c\
 	subversion/libsvn_ra_svn/marshal.c\
 	subversion/libsvn_ra_svn/streams.c\
-	subversion/libsvn_ra_svn/version.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_delta-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_ra_svn-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_wc/libsvn_wc-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_ra_svn/version.c\
 	subversion/libsvn_wc/adm_crawler.c\
 	subversion/libsvn_wc/adm_files.c\
 	subversion/libsvn_wc/adm_ops.c\
@@ -304,33 +156,7 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_wc/wc_db_pristine.c\
 	subversion/libsvn_wc/wc_db_util.c\
 	subversion/libsvn_wc/wc_db_wcroot.c\
-	subversion/libsvn_wc/workqueue.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_delta-1\
-	libsvn_diff-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_wc-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_ra_neon/libsvn_ra_neon-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_wc/workqueue.c\
 	subversion/libsvn_ra_neon/commit.c\
 	subversion/libsvn_ra_neon/fetch.c\
 	subversion/libsvn_ra_neon/file_revs.c\
@@ -347,65 +173,9 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_ra_neon/props.c\
 	subversion/libsvn_ra_neon/replay.c\
 	subversion/libsvn_ra_neon/session.c\
-	subversion/libsvn_ra_neon/util.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libneon\
-	libssl\
-	libcrypto\
-	libexpat\
-	libsvn_delta-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_ra_neon-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_fs/libsvn_fs-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_ra_neon/util.c\
 	subversion/libsvn_fs/access.c\
-	subversion/libsvn_fs/fs-loader.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_fs_util-1\
-	libsvn_subr-1\
-	libsvn_fs_fs-1\
-	libsvn_delta-1
-LOCAL_MODULE := libsvn_fs-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_repos/libsvn_repos-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_fs/fs-loader.c\
 	subversion/libsvn_repos/authz.c\
 	subversion/libsvn_repos/commit.c\
 	subversion/libsvn_repos/delta.c\
@@ -421,125 +191,14 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_repos/replay.c\
 	subversion/libsvn_repos/reporter.c\
 	subversion/libsvn_repos/repos.c\
-	subversion/libsvn_repos/rev_hunt.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_fs-1\
-	libsvn_delta-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_repos-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_ra_local/libsvn_ra_local-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_repos/rev_hunt.c\
 	subversion/libsvn_ra_local/ra_plugin.c\
-	subversion/libsvn_ra_local/split_url.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_repos-1\
-	libsvn_fs-1\
-	libsvn_delta-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_ra_local-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/tests/libsvn_test-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	subversion/subversion/include\
-	subversion/subversion\
-	apr/include\
-	apr-util/include\
-	expat/lib\
-	libiconv/include\
-	neon/src\
-	sqlite3
-LOCAL_SRC_FILES:= \
-	subversion/tests/svn_test_fs.c\
-	subversion/tests/svn_test_main.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_repos-1\
-	libsvn_fs-1\
-	libsvn_delta-1\
-	libsvn_subr-1
-LOCAL_MODULE := libsvn_test-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-#original path: subversion/libsvn_ra/libsvn_ra-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_ra_local/split_url.c\
 	subversion/libsvn_ra/compat.c\
 	subversion/libsvn_ra/debug_reporter.c\
 	subversion/libsvn_ra/deprecated.c\
 	subversion/libsvn_ra/ra_loader.c\
-	subversion/libsvn_ra/util.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_delta-1\
-	libsvn_subr-1\
-	libsvn_ra_local-1\
-	libsvn_repos-1\
-	libsvn_fs-1\
-	libsvn_ra_svn-1\
-	libsvn_ra_neon-1
-LOCAL_MODULE := libsvn_ra-1
-
-include $(BUILD_STATIC_LIBRARY)
-
-
-#original path: subversion/libsvn_client/libsvn_client-1.la
-include $(CLEAR_VARS)
-
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
-
-LOCAL_C_INCLUDES:= \
-	$(LOCAL_PATH)/subversion/include\
-	$(LOCAL_PATH)/subversion\
-	external/apr/include\
-	external/apr-util/include\
-	external/libexpat/lib\
-	external/libiconv/include\
-	external/libneon/src\
-	external/sqlite/dist
-LOCAL_SRC_FILES:= \
+	subversion/libsvn_ra/util.c\
 	subversion/libsvn_client/add.c\
 	subversion/libsvn_client/blame.c\
 	subversion/libsvn_client/cat.c\
@@ -578,14 +237,6 @@ LOCAL_SRC_FILES:= \
 	subversion/libsvn_client/url.c\
 	subversion/libsvn_client/util.c\
 	subversion/libsvn_client/version.c
-LOCAL_STATIC_LIBRARIES:= \
-	libaprutil-1\
-	libapr-1\
-	libsvn_wc-1\
-	libsvn_ra-1\
-	libsvn_delta-1\
-	libsvn_diff-1\
-	libsvn_subr-1
 LOCAL_MODULE := libsvn_client-1
 
 include $(BUILD_STATIC_LIBRARY)
