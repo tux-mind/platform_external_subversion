@@ -3,7 +3,8 @@ LOCAL_PATH := $(call my-dir)
 #original path: subversion/libsvn_subr/libsvn_subr-1.la
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -ffunction-sections -fdata-sections
+LOCAL_CFLAGS:= -DLINUX -D_REENTRANT -D_GNU_SOURCE -Wno-deprecated-declarations \
+               -ffunction-sections -fdata-sections
 
 LOCAL_C_INCLUDES:= \
 	$(LOCAL_PATH)/subversion/include\
